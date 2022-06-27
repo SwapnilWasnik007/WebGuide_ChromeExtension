@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" />
+    <style>
+        .button {
+            background-color: #2b02f6;
+            /* Green */
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .button1:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .disableBtn {
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
+
+        body {
+            min-width: 300px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .ActiveButtonColor {
+            background-color: #f2ff00;
+        }
+
+        .ResetButtonColor {
+            background-color: #2b02f6;
+        }
+
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h2>Web Guider Admin</h2>
+
+        <button id="btnEnableWebGuide" class="button button1">Start</button>
+        <button id="btnDisableWebGuide" class="button button1">Stop</button>
+        <button id="btnApply" class="button button1">Apply</button>
+        <button id="btnReset" class="button button1">Reset</button>
+
+        <!-- <h2>Toggle Switch</h2>
+
+        <label class="switch">
+            <input id="webGuideBtn" type="checkbox" checked>
+            <span class="slider round"></span>
+        </label> -->
+    </div>
+</body>
+<script src="./test.js"></script>
+</html>

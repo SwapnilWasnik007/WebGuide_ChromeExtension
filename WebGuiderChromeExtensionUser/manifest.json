@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "WebGuideUserChromeExtension",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://192.168.1.8:5003/"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "intro.css"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        "*.html",
+        "*.js",
+        "*.css"
+    ],
+    "content_security_policy": "script-src 'self' 'sha256-/13BBW2yQVtpCsBV7JiO23y7pwEFFUobOzefJ27Nltg='; object-src 'self'",
+    "browser_action": {}
+}

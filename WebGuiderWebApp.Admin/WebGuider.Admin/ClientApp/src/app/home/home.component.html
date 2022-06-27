@@ -1,0 +1,23 @@
+<div>
+    <div class="shadow p-3 mb-3 bg-white rounded text-center">
+        <h3>Manage Web Intro</h3>
+    </div>
+    <div class="row justify-content-end mr-2 mb-3">
+        <button class="btn btn-primary px-5" (click)="SaveData()" [disabled]="rData.length == 0">Save</button>
+    </div>
+    <div class="row align-items-center shadow p-3 mb-5 bg-white rounded" *ngFor="let data of rData; let i = index">
+        <div class="row col-md-6 p-3 align-items-center justify-content-center" style="width: 100px; height: 100px;">
+            <img style="max-height: 100%; max-width: 100%; border: 2px solid black" src="{{data.item_CanvasData}}" />
+        </div>
+        <div class="col-md-6">
+            <div class="form-group m-2">
+                <label for="exampleInputEmail1">Enter Description:</label>
+                <input type="text" class="form-control" [(ngModel)]="data.item_Description" placeholder="Enter Description" />
+            </div>
+            <div class="form-group m-2">
+                <label for="exampleInputEmail1">Enter Sequence:</label>
+                <input type="text" class="form-control" [(ngModel)]="data.item_Sequence" placeholder="Enter Sequence" />
+            </div>
+        </div>
+    </div>
+</div>
