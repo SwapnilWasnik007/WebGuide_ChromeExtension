@@ -1,7 +1,5 @@
 # WebGuide_ChromeExtension
 
-# StudentManagementSystem
-
 ## Summary:
 This is a JavaScript project for a Chrome extension that aims to provide an interactive learning experience.
 For more learning: [https://www.freecodecamp.org/news/building-chrome-extension/](https://www.freecodecamp.org/news/building-chrome-extension/)
